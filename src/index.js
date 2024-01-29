@@ -29,13 +29,12 @@ class WpsRefresh {
 
         jQuery('#wpshopify-refresh-button').prop('disabled', true)
 
-        this.addMessage('Fetching shop data...')
-
-        // fetch all shop data
-        // object consisting of `products` (array of product nodes)
+        
+        
         // and `collections` (array of collection nodes)
         const shopData = await refreshAll()
-
+        
+        this.addMessage('Fetching shop data...')
         // log results
         this.addMessage(
             `Found ${shopData.products.length} product(s) and ${
